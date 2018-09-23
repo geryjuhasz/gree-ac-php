@@ -27,10 +27,7 @@ class Controller extends BaseController
 
         $aData = $request->all();
         if (isset($aData['powerToggle'])) {
-            dd($aData);
-            if ($aData['powerToggle'] == 'on') {
-                $oDevice->on();
-            }
+            $oDevice->on();
         } else {
             $oDevice->off();
             return;
